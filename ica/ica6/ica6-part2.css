@@ -6,7 +6,7 @@ body{
 #flex-parent{
     background-color: orangered;
     display: flex;
-    flex-direction: row; /*not necesarry*/
+    flex-direction: row; /*not necessary*/
 }
 
 #flex-parent p{
