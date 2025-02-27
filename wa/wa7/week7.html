@@ -5,19 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/week7.css">
-    <title>Dance Like Nav</title>
+    <title>Me when</title>
 </head>
 <body>
-    <h1>Put Your Title Here</h1> <!--change this text-->
+    <h1>Me when</h1>
     <div id="red-ball">
     </div>
     <nav>
-        <a>Home</a>
-        <a>About</a>
-        <a>Projects</a>
-        <a>More</a>
-        <a>Socials</a>
+        <a>me</a>
+        <a>me when</a>
+        <a>me</a>
+        <a>when</a>
+        <a>me when</a>
     </nav>
-    <img src="img/matisseChess.png">
+    <img src="img/catAngy.jpg" alt ="orange cat in a vest over a litterbox">
+
+    <script>
+        // Make the ball move to a certain position:
+        const f = document.getElementById("red-ball");
+        document.addEventListener("click",(ev) => {
+            f.style.transform = `translate(${ev.clientX}px, ${ev.clientY}px) translate(-50%, -50%)`;
+          }, /*Tried to get the ball to center on where you click; couldn't figure it out*/
+          false,
+        );
+      </script>
 </body>
 </html>

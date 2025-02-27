@@ -1,36 +1,61 @@
-body{
+h1 {
+    display: inline-block; /* Ensures the border wraps around the text */
+    padding: 5px; /* Adds some space between text and border */
+    border: 2px dashed black; /* Creates the stroke */
+    background-color: transparent; /* Ensures no fill */
+}
+
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: blanchedalmond;
+    background-color: rgb(0, 255, 102);
 }
-nav{
+nav {
     height: 50vh;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     height:20px;
-    background-color: blueviolet;
+    background-color: rgb(57,52,54);
 }
-nav a{
+nav a {
     width:10vw;
     text-align: center;
     text-decoration: none;
-    color:black;
+    color: rgb(227,225,227);
 }
 
-
-img{
+img {
     width:30vw;
     height: 30vh;
 }
 
-#red-ball{
-    background-color: crimson;
+#red-ball {
+    background-color: rgb(103,88,72);
     width: 20px;
     height:20px;
     border-radius: 50%;
     position: absolute;
     left:5vw;
     top:0;
+    transition: transform 1s;
+    transform-origin: center;
 }
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  img {
+    width: 200px; /* Adjust as needed */
+    animation: pulse 2s infinite ease-in-out;
+  }
