@@ -1,10 +1,10 @@
 function changeContent(title, description) {
-    document.getElementById("show-title").innerText = title;
+    document.getElementById("show-title").innerHTML = title;
     document.getElementById("show-description").innerHTML = description;
 }
 
 document.getElementById("concert1").addEventListener("click", function () {
-    changeContent("CONCERT 1: COSMIC SENSORY CONVERGENCE: STELLAR VOYAGE",
+    changeContent('CONCERT 1: COSMIC SENSORY CONVERGENCE: STELLAR VOYAGE',
         `<p>
             <strong>Stardate 2025.108-109 | Harmonic Alignment: 22:00</strong> <br>
             <strong>Conductor: Multi-Dimensional Maestro ZEROX-9</strong> <br>
