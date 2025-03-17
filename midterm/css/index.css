@@ -1,14 +1,13 @@
-
-
-.navbar {
-  width: 200px;
+.full-names {
+  display: flex;
+  flex-direction: column;
   height: fit-content;
   background: #333;
   color: white;
   padding: 20px;
 }
 
-.navbar a {
+.full-names a {
   font-family: "Doto", sans-serif;
   display: block;
   white-space: nowrap; /* Prevent text from wrapping */
@@ -21,8 +20,13 @@
   
 }
 
-.navbar a:hover {
+.full-names a:hover {
   background: #555;
+}
+
+
+.short-names {
+  display: none;
 }
 
 .content {
@@ -38,7 +42,9 @@
 body {
   display: flex;
   font-family: "Doto", sans-serif;
-
+  color: rgb(232,230,227);
+  background-color: rgb(24,26,27);
+  padding-right: 20px;
   margin: 0;
 }
 
@@ -47,8 +53,36 @@ body {
 
 }
 
-/* @media (max-width: 500px) {
-    .grid {
-      flex-direction: column;
+
+/*swapping full-name navbar for short-name navbar*/
+@media (max-width: 701px) {
+    .full-names {
+      display: none;
     }
-  } */
+
+    .short-names {
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+      background: #333;
+      color: white;
+      padding: 20px;
+    }
+    
+    .short-names a {
+      font-family: "Doto", sans-serif;
+      display: block;
+      white-space: nowrap; /* Prevent text from wrapping */
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      transition: background 0.3s;
+      
+    }
+    
+    .short-names a:hover {
+      background: #555;
+    }
+  }
