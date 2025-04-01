@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hihihihi</h1>
+
+    <script>
+        const header = document.querySelector('.heading');
+        // header.addEventListener('click', changeColor('red'));
+        header.addEventListener('click', function(color) {
+            header.textContent = color;
+        };
+
+        function changeColor(color) {
+            header.textContent = color;
+        }
+
+        var x = 2;
+
+        for (let i = 0; i< 10; i++){
+            if (x == 2) {
+                console.log("X IS 2");
+                x = 0;
+            }
+            else if (x == 0) {
+                console.log("X IS 1");
+                x = 1;
+            }
+            else {
+                console.log("X IS 0");
+                x = 2;
+            }
+        }
+        
+        let y = 10;
+        while (y > 0) {
+            console.log(y);
+            y-=1
+        }
+        console.log("THE LOOP IS DONE");
+
+    </script>
+</body>
+</html>
