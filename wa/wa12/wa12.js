@@ -1,11 +1,10 @@
-var newBtn=document.querySelector('#js-new-quote').addEventListener('click', getQuote);
-var answerBtn=document.querySelector('#js-tweet').addEventListener('click', displayAnswer);
+var newBtn = document.querySelector('#js-new-quote').addEventListener('click', getQuote);
+var answerBtn = document.querySelector('#js-tweet').addEventListener('click', displayAnswer);
 
 var endpoint="https://api.kanye.rest";
 
 let current = {
-    question : "",
-    answer : ""
+    quote : "",
 };
 
 async function getQuote() {
@@ -16,11 +15,11 @@ async function getQuote() {
             throw Error(response.statusText);
         }
         const json = await response.json();
-        // console.log(json);
         displayQuote(json.question);
 
-        current.question=json.question;
-        current.answer=json.answer;
+        // current.question=json.question;
+        // current.answer=json.answer;
+        current.quote=json.quote;
 
     } catch(err){
         console.log(err);
@@ -30,10 +29,11 @@ async function getQuote() {
 
 function displayQuote(quote) {
     const quoteText=document.querySelector('#js-quote-text');
-    quoteText.textContent = quote;
+    quoteText.textContent = current.quote;
 }
 
 function displayAnswer() {
-    const answerText=document.querySelector('#js-answer-text');
-    answerText.textContent = current.answer;
+    const searchQuery = "kanye";
+    const googleURL = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+    window.open(googleURL, '_blank');
 }

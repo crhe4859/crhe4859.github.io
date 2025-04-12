@@ -4,17 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../midterm/css/index.css">
+    <!-- <link rel="stylesheet" href="../../midterm/css/index.css"> -->
+    <link rel="stylesheet" href="wa12.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Doto:wght,ROND@100..900,100&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="app">
+        <header>Kanye quotes</header>
+        <section class="quotes">
+          <div class="quote-text" id="js-quote-text"></div>
+          <div class="quote-text" id="js-answer-text"></div>
+        </section>
+        <section class="controls" >
+          <button type="button" id="js-new-quote" class="new-quote button">
+            Generate a new Kanye quote
+          </button>
+          <button type="button" id="js-tweet" class="twitter button">
+            See the man himself
+          </button>
+          <!-- <a class="answer button" id="js-tweet" target="_blank" rel="noreferrer">Show me the answer!</a> -->
+        </section>
+      </div>
 
-    <p>
-        Include a short paragraph at the bottom of the page explaining what your extension is
+    <p id="footer">
+        The extension I added was to make the second button "See the man himself." The button magically takes you to page that is about, in fact, the man himself.
     </p>
 
     <script src="wa12.js"></script>
