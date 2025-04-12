@@ -6,7 +6,7 @@ var endpoint="https://api.kanye.rest";
 let current = {
     quote : "",
 };
-
+//hello
 async function getQuote() {
     try {
         const response = await fetch(endpoint);
