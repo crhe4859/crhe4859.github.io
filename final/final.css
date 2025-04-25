@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+canvas {
+    display: none;
+    cursor: none;
+}
+#formDiv {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+}
+input, button {
+    font-size: 1.2em;
+    padding: 8px;
+}
+#cursorDot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    display: none; /* Initially hidden */
+    pointer-events: none; /* Ensure it doesn’t interfere with other elements */
+}
+#instructions {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    text-align: center;
+    font-size: 1.5em;
+    width: 80%;
+    display: none;
+}
