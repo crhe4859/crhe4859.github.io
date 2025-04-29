@@ -1,40 +1,114 @@
-body {
+/* Reset some default styles */
+* {
     margin: 0;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-  }
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#formDiv {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #4CAF50;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#instructions {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    display: none;
+    max-width: 600px;
+    margin: 20px;
+}
+
+#instructions p {
+    margin-bottom: 15px;
+}
+
+#instructions em {
+    font-style: italic;
+    text-decoration: underline;
+}
+
 canvas {
     display: none;
     cursor: none;
+    border: 2px solid #ddd;
+    border-radius: 8px;
 }
-#formDiv {
-    position: absolute;
-    top: 40%;
-    width: 100%;
-    text-align: center;
-    font-size: 1.5em;
-}
-input, button {
-    font-size: 1.2em;
-    padding: 8px;
-}
+
 #cursorDot {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background-color: red;
     border-radius: 50%;
     display: none;
     pointer-events: none;
 }
-#instructions {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: black;
-    text-align: center;
-    font-size: 1.5em;
-    width: 80%;
-    display: none;
+
+@media (max-width: 600px) {
+    #formDiv {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    input, button {
+        font-size: 1em;
+    }
 }
